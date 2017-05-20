@@ -1,0 +1,11 @@
+F:\projects\freelance\Email Server\EmailServer\EmailServer\bin\Debug\EmailServer.exe.config
+F:\projects\freelance\Email Server\EmailServer\EmailServer\bin\Debug\EmailServer.exe
+F:\projects\freelance\Email Server\EmailServer\EmailServer\bin\Debug\EmailServer.pdb
+F:\projects\freelance\Email Server\EmailServer\EmailServer\bin\Debug\LumiSoft.Net.dll
+F:\projects\freelance\Email Server\EmailServer\EmailServer\bin\Debug\LumiSoft.Net.xml
+F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.Form1.resources
+F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.Properties.Resources.resources
+F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.csproj.GenerateResource.Cache
+F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.exe
+F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.pdb
+F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.csprojResolveAssemblyReference.cache
