@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LumiSoft.Net;
+using LumiSoft.Net.IMAP;
 
 namespace EmailInterfaces
 {
@@ -51,6 +53,11 @@ namespace EmailInterfaces
             set;
         }
 
+        IMAP_t_MsgFlags Flag
+        {
+            get;
+            set;
+        }
         void LoadInfos();
     }
 }

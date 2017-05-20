@@ -20,7 +20,7 @@ namespace EmailServer
             Application.Run(new Form1());
             */
             Main test = new Main();
-            test.Init("your email","Syour password","imap","path where attachments will be downloaded");
+            test.Init("","","imap","");
         }
     }
 }

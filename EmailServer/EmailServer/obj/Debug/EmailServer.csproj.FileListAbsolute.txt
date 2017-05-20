@@ -8,4 +8,3 @@ F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer
 F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.csproj.GenerateResource.Cache
 F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.exe
 F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.pdb
-F:\projects\freelance\Email Server\EmailServer\EmailServer\obj\Debug\EmailServer.csprojResolveAssemblyReference.cache

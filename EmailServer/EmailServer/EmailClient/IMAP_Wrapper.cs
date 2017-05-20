@@ -120,12 +120,13 @@ namespace EmailClient
                             string Subject = fetchResp.Envelope.Subject != null ? fetchResp.Envelope.Subject : "<none>";
                             string Date = fetchResp.InternalDate.Date.ToString("dd.MM.yyyy HH:mm");
                             string size = ((decimal)(fetchResp.Rfc822Size.Size / (decimal)1000)).ToString("f2") + " kb";
+                            IMAP_t_MsgFlags Flag = fetchResp.Flags.Flags;
 
                             Mail_t_Address[] froms = fetchResp.Envelope.From;
                             
                             string Tag = fetchResp.UID.UID.ToString();
 
-                            IMAP_Message_Wrapper wr = new IMAP_Message_Wrapper { Client = Client, SequenceNumber = (int)fetchResp.UID.UID, UID = Tag, Date = fetchResp.InternalDate.Date, Size = fetchResp.Rfc822Size.Size, Subject = Subject };
+                            IMAP_Message_Wrapper wr = new IMAP_Message_Wrapper { Client = Client, SequenceNumber = (int)fetchResp.UID.UID, UID = Tag, Date = fetchResp.InternalDate.Date, Size = fetchResp.Rfc822Size.Size, Subject = Subject , Flag = Flag };
                             foreach (var item in froms)
                             {
                                 if (item is Mail_t_Mailbox)
@@ -185,7 +186,13 @@ namespace EmailClient
         private string _TextBody = null;
         private List<IEMailAttachment> _Attachments = new List<IEMailAttachment>();
         private List<String> _From = new List<string>();
+        private IMAP_t_MsgFlags _Flag = null;
 
+        public IMAP_t_MsgFlags Flag
+        {
+            get { return _Flag; }
+            set { _Flag = value; }
+        }
         public List<String> From
         {
             get { return _From; }

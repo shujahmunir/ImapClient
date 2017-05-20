@@ -64,7 +64,7 @@ namespace EmailServer
                  ImapClient = EmailClientFactory.GetClient(EmailClientEnum.IMAP);
             }
 
-            if (path == null || path == "")
+            if (path != null && path != "")
             {
                 // path = "F:\\Projects\\temp\\emailresponse.txt";
                 emailsContentFile = path + "\\emailresponse.txt";
@@ -85,23 +85,31 @@ namespace EmailServer
             // I assume that 5 is the last "ID" readed by my client. 
             // If I want to read all messages i use "ImapClient.LoadMessages();"
             //ImapClient.LoadRecentMessages(5);
-            ImapClient.LoadMessages("6900", "*");
+           // ImapClient.LoadMessages("6900", "*");
+
+            ImapClient.LoadMessages();
             // To read all my messages loaded:
             for (int i = 0; i < ImapClient.Messages.Count; i++)
             {
+                
                 IEmail msm = (IEmail)ImapClient.Messages[i];
+                
+                if(i == ImapClient.Messages.Count- 2)
+                {
+                    autoReply(msm);
+                }
                 // Load all infos include attachments
                 msm.LoadInfos();
                 Console.WriteLine(msm.Date.ToString() + " - " + msm.From[0] + " - " +
                                   msm.Subject + " - " + msm.Attachments.Count);
 
-                sw.WriteLine(msm.Date.ToString() + " - " + msm.From[0] + " - " +
+                sw.WriteLine(msm.Flag.ToString() + " - " + msm.Date.ToString() + " - " + msm.From[0] + " - " +
                                   msm.Subject + " - " + msm.Attachments.Count);
 
                 foreach (var attachment in msm.Attachments)
                 {
                         
-                        //ByteArrayToFile(attachment.Text,attachment.Body,path);
+                        ByteArrayToFile(attachment.Text,attachment.Body,path);
                 }
 
             }

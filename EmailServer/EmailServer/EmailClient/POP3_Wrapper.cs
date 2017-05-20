@@ -6,6 +6,7 @@ using LumiSoft.Net;
 using LumiSoft.Net.Mail;
 using LumiSoft.Net.MIME;
 using LumiSoft.Net.POP3.Client;
+using LumiSoft.Net.IMAP;
 using EmailInterfaces;
 
 namespace EmailClient
@@ -185,13 +186,20 @@ namespace EmailClient
         private string _TextBody = null;
         private List<IEMailAttachment> _Attachments = new List<IEMailAttachment>();
         private List<String> _From = new List<string>();
+        private IMAP_t_MsgFlags _Flag = null;
 
+        public IMAP_t_MsgFlags Flag
+        {
+            get { return _Flag; }
+            set { _Flag = value; }
+        }
         public List<String> From
         {
             get { return _From; }
             set { _From = value; }
         }
 
+        
         public List<IEMailAttachment> Attachments
         {
             get { return _Attachments; }
